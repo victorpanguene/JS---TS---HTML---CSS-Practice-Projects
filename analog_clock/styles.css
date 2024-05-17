@@ -18,17 +18,19 @@ body {
   height: 130px;
   width: 2px;
   background-color: rgb(70, 255, 255);
-  left: 49.6%;
-  bottom: 149px;
+  left: 49.3%;
+  bottom: 49.3%;
   opacity: 50%;
+  transform-origin: 0 100%;
 }
 #minutes-hand {
   position: absolute;
   height: 100px;
   width: 2px;
   background-color: rgb(253, 120, 227);
-  left: 49.6%;
-  bottom: 149px;
+  left: 49.3%;
+  bottom: 49.3%;
+  transform-origin: 0 100%;
 }
 #hours-hand {
   position: absolute;
@@ -36,7 +38,8 @@ body {
   width: 4px;
   background-color: rgb(205, 112, 255);
   left: 49.3%;
-  bottom: 148px;
+  bottom: 49.3%;
+  transform-origin: 0 100%; //This will make all transitions start from the center.
 }
 #center {
   position: absolute;
@@ -45,5 +48,5 @@ body {
   border-radius: 50%;
   background-color: rgb(252, 200, 60);
   left: 48.3%;
-  bottom: 49.3%;
+  bottom: 48.3%;
 }
