@@ -1,3 +1,13 @@
 body {
   display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+.time {
+  display: flex;
+  background-color: #151515;
+  color: #fff;
+  padding: 1rem;
+  border-radius: 0.1rem;
 }
