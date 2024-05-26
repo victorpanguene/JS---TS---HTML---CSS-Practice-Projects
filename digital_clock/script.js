@@ -7,7 +7,7 @@ const getTime = () => {
   const hourUpdate = currentTime.getHours();
   const minutesUpdate = currentTime.getMinutes();
   const secondsUpdate = currentTime.getSeconds();
-  const time = hours.innerHTML();
+  const time = hours.innerHTML;
   console.log("🚀 ~ getTime ~ time:", time);
   console.log("🚀 ~ getTime ~ hourUpdate:", hourUpdate);
 
