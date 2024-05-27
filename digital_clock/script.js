@@ -1,6 +1,6 @@
-let hours = document.getElementsByClassName("hours");
-const minutes = document.getElementsByClassName("minutes");
-const seconds = document.getElementsByClassName("seconds");
+let hours = document.getElementById("hours");
+const minutes = document.getElementById("minutes");
+const seconds = document.getElementById("seconds");
 
 const getTime = () => {
   const currentTime = new Date();
