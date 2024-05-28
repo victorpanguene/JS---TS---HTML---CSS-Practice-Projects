@@ -1,19 +1,12 @@
 let hours = document.getElementById("hours");
-const minutes = document.getElementById("minutes");
-const seconds = document.getElementById("seconds");
+let minutes = document.getElementById("minutes");
+let seconds = document.getElementById("seconds");
 
 const getTime = () => {
-  const currentTime = new Date();
-  const hourUpdate = currentTime.getHours();
-  const minutesUpdate = currentTime.getMinutes();
-  const secondsUpdate = currentTime.getSeconds();
-  const time = hours.innerHTML;
-  console.log("🚀 ~ getTime ~ time:", time);
-  console.log("🚀 ~ getTime ~ hourUpdate:", hourUpdate);
-
-  return hourUpdate;
+  let currentTime = new Date();
+  hours.innerHTML = currentTime.getHours();
+  minutes.innerHTML = currentTime.getMinutes();
+  seconds.innerHTML = currentTime.getSeconds();
 };
 
-getTime();
-
-// setInterval(pointsCounter, 1000);
+setInterval(getTime, 1000);
