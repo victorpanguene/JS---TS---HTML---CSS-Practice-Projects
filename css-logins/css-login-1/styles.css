@@ -1,3 +1,72 @@
 * {
   box-sizing: border-box;
 }
+:root {
+  --color-primary: #7656f0;
+}
+@keyframes rotate {
+  100% {
+    background-position: 15% 50%;
+  }
+}
+body {
+  display: grid;
+  place-items: center;
+
+  background-image: url("background.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: var(--color-primary)
+
+  margin: 0;
+  padding: 0 24px;
+
+  height: 100vh;
+
+  color: #f9f9f9;
+
+  font-family: "Helvetica Neue",
+}
+
+body::after {
+ content: "";
+ position: fixed;
+ insetL: 0;
+ backdrop: rgb(0 0 0 / 35%)
+
+}
+
+.login-card{
+ position: relative;
+ z-index: 3;
+ width: 100%;
+ margin: 0 20px;
+ padding: 70px 30px 44px;
+ border-radius: 20px;
+ background: rgb(24 21 36 / 66%);
+ backdrop-filter: blur(10px);
+ text-align: center
+}
+
+.logn-card > h2{
+ font-size: 36px;
+ font-weight: 400;
+ margin: 0 0 12px;
+
+}
+@media (width >= 628px){
+ .login-card {
+  position: fixed;
+  top: 0;
+  right: 0;
+  padding: 0 44px;
+  width: 50%;
+  max-width: 500px;
+  min-width: auto;
+  display: flex;
+  border-radius: 0;
+  flex-direction: column;
+  justify-content: center;
+
+ }
+}
