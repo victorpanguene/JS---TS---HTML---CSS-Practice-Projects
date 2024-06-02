@@ -25,7 +25,7 @@ body {
 
   color: #f9f9f9;
 
-  font-family: "Helvetica Neue",
+  font-family: "Euclid Circular A";
 }
 
 body::after {
@@ -48,12 +48,20 @@ body::after {
  text-align: center
 }
 
-.logn-card > h2{
- font-size: 36px;
- font-weight: 400;
- margin: 0 0 12px;
-
+@media (width>= 448px){
+  .login-card {
+    margin: 0;
+    width: 70%;
+    min-width: 400px;
+  }
 }
+
+@media (width>= 500px){
+  body {
+    padding: 0
+  }
+}
+
 @media (width >= 628px){
  .login-card {
   position: fixed;
@@ -67,6 +75,30 @@ body::after {
   border-radius: 0;
   flex-direction: column;
   justify-content: center;
-
  }
+}
+
+.logn-card > h2{
+ font-size: 36px;
+ font-weight: 400;
+ margin: 0 0 12px;
+}
+
+.login-card > h3 {
+  color: rgb(255 255 255 / 38%);
+  margin: 0 0 48px;
+  font-weight: 400;
+  font-size: 16px;
+}
+.login-form {
+ width: 100%;
+ margin: 0;
+ display: grid;
+ gap: 16px
+}
+
+.login-form > :is(input, button) {
+  width:100px;
+  height: 56px;
+  
 }
