@@ -12,20 +12,16 @@
 body {
   display: grid;
   place-items: center;
-
+  margin: 0;
+  height: 100vh;
+  padding: 0 24px;
+  background-color: var(--color-primary);
   background-image: url("background.svg");
   background-repeat: no-repeat;
   background-size: cover;
-  background-color: var(--color-primary);
-
-  margin: 0;
-  padding: 0 24px;
-
-  height: 100vh;
-
-  color: #f9f9f9;
-
   font-family: "Euclid Circular A";
+  color: #f9f9f9;
+  animation: rotate 6s infinite alternate linear;
 }
 
 body::after {
@@ -33,7 +29,6 @@ body::after {
  position: fixed;
  inset: 0;
  background: rgb(0 0 0 / 35%);
-
 }
 
 .login-card{
@@ -48,7 +43,7 @@ body::after {
  text-align: center
 }
 
-@media (width>= 448px){
+@media (width>= 448px) {
   .login-card {
     margin: 0;
     width: 70%;
@@ -67,6 +62,7 @@ body::after {
   position: fixed;
   top: 0;
   right: 0;
+  bottom: 0;
   padding: 0 44px;
   width: 50%;
   max-width: 500px;
@@ -129,4 +125,11 @@ outline: var(--color-primary)
   font-weight: 400;
   text-align: center;
   transition: all 0.375s;
+}
+.login-form > a {
+  color: var(--color-primary);
+  font-size: 16px;
+  text-align: left;
+  text-decoration: none;
+  margin-bottom: 30px;
 }
