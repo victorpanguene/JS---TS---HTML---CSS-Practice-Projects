@@ -34,8 +34,31 @@ body {
  box-sizing: border-box;
 }
 
-/* Makiing the cross */
+/* Making the cross */
 .cross {
- height: 90px;
- width: 90px;
+ height: 60px;
+ width: 60px;
+ position: relative;
+}
+
+.cross:before,
+.cross:after {
+ content: '';
+ position: absolute;
+ background-color: red;
+ transform: rotate(45deg);
+}
+
+.cross:before {
+ left: 50%;
+ width: 30%;
+ height: 100%;
+ margin-left: -15%;
+}
+
+.cross:after {
+ top: 50%;
+ height: 30%;
+ width: 100%;
+ margin-top: -15%;
 }
