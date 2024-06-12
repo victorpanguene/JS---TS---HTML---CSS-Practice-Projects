@@ -33,3 +33,9 @@ body {
  border: 16px solid blue;
  box-sizing: border-box;
 }
+
+/* Makiing the cross */
+.cross {
+ height: 90px;
+ width: 90px;
+}
