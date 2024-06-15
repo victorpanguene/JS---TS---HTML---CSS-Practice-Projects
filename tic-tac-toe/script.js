@@ -1,18 +1,26 @@
 const gameBoard = document.querySelector('#gameboard')
 const infoDisplay = document.querySelector('#info')
-const startCells = ['', '', '', '', '', '', '', '', '', ]
+const startCells = ['', '', '', '', '', '', '', '', '']
+let go = 'circle'
+
+// 
 
 const createBoards = () => { 
- startCells.forEach((cell, index) => {
+ startCells.forEach((_cell, index) => {
   const cellElement = document.createElement('div')
-  gameBoard.append(cellElement)
   cellElement.classList.add('square')
-  const circleElement = document.createElement('div')
-  circleElement.classList.add('cross')
-  cellElement.append(circleElement)
-  gameBoard.append(cellElement)
- })
-}
-
-createBoards() 
-
+  cellElement.id = index
+ cellElement.addEventListener('click', addGo)
+ gameBoard.append(cellElement)
+})
+  }
+  createBoards() 
+function addGo(e) {
+  console.log('Please', e)
+  const goDisplay = document.createElement('div')
+  goDisplay.classList.add(go)
+  e.target.append(goDisplay)
+  go = go === 'circle' ? "cross" : 'circle'
+  e.target.removeEventListener('click', addGo)
+  // infoDisplay.textContent = "it is now " + go + "'s ßgo" 
+}  
