@@ -24,3 +24,9 @@ function addGo(e) {
   e.target.removeEventListener('click', addGo)
   // infoDisplay.textContent = "it is now " + go + "'s ßgo" 
 }  
+
+function checkScore() {
+  const allSquares = document.querySelectorAll('.square')
+  console.log("🚀 ~ checkScore ~ allSquares:", allSquares)
+}
+checkScore()
