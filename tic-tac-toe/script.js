@@ -32,6 +32,7 @@ function checkScore() {
     [0, 3, 6], [1, 4, 7], [2, 5, 8],
     [0,4,8], [2,4,6]
   ]
+  
   winningCombos.forEach(array => {
     const circleWins = array.every(cell => {
       allSquares[cell].firstChild?.classList.contains('circle')
