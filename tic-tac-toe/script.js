@@ -43,5 +43,5 @@ function checkScore() {
 }
 checkScore()
 
-// fix display text 
+ 
 // get other functions
