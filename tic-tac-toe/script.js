@@ -42,6 +42,3 @@ function checkScore() {
   })
 }
 checkScore()
-
- 
-// get other functions
