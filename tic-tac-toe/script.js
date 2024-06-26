@@ -13,8 +13,10 @@ const createBoards = () => {
  cellElement.addEventListener('click', addGo)
  gameBoard.append(cellElement)
 })
-  }
-  createBoards() 
+}
+  
+createBoards() 
+  
 function addGo(e) {
   console.log('Please', e)
   const goDisplay = document.createElement('div')
@@ -47,6 +49,7 @@ function checkScore() {
       allSquares[cell].firstChild?.classList.contains('cross')
       if (crossWins) {
         infoDisplay.textContent = 'Cross Wins'
+        allSquares.forEach(square => square.replaceWith(square.cloneNode(true)))
       }
     })
 
