@@ -1,11 +1,12 @@
 const gameBoard = document.querySelector('#gameboard')
 const infoDisplay = document.querySelector('#info')
 const startCells = ['', '', '', '', '', '', '', '', '']
+
+infoDisplay.textContent = 'Circle goes first'
+
 let go = 'circle'
 
-// 
-
-const createBoards = () => { 
+function createBoards(){ 
  startCells.forEach((_cell, index) => {
   const cellElement = document.createElement('div')
   cellElement.classList.add('square')
@@ -35,25 +36,11 @@ function checkScore() {
   ]
   
   winningCombos.forEach(array => {
-    const circleWins = array.every(cell => {
-      allSquares[cell].firstChild?.classList.contains('circle')
-      if (circleWins) {
-        infoDisplay.textContent = 'Circle Wins'
-        allSquares.forEach(square => square.replaceWith(square.cloneNode(true)))
-      }
-    })
-  })
-
-  winningCombos.forEach(array => {
-    const crossWins = array.every(cell => {
-      allSquares[cell].firstChild?.classList.contains('cross')
-      if (crossWins) {
-        infoDisplay.textContent = 'Cross Wins'
-        allSquares.forEach(square => square.replaceWith(square.cloneNode(true)))
-      }
-    })
-
-  
+    const circleWins = array.every(cell =>
+      allSquares[cell].firstChild?.classList.contains('circle'))
+     if (circleWins) {
+      infoDisplay.textContent = 'Circle wins'
+    }
   })
 }
 checkScore()
