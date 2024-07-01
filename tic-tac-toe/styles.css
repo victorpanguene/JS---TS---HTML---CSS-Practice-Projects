@@ -4,6 +4,7 @@ body {
  display: flex;
  justify-content: center;
  align-items: center;
+ flex-direction: column;
  height: 100vh;
 }
 
@@ -33,7 +34,6 @@ body {
  border: 16px solid blue;
  box-sizing: border-box;
 }
-
 
 .cross {
  height: 60px;
