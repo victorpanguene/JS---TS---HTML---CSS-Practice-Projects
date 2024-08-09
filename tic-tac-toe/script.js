@@ -15,7 +15,8 @@ function createBoards(){
   gameBoard.append(cellElement)
 })
 }
-   createBoards() 
+
+createBoards() 
   
 function addGo(e) {
   console.log(e)
